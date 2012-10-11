@@ -450,7 +450,7 @@ main(int argc, char **argv)
   ccn_charbuf_append_closer(templ);
   ccnb_tagged_putf(templ, CCN_DTAG_Scope, "%d", 1);
   ccn_charbuf_append_closer(templ);
-  res = ccn_get(ccn, name_v, NULL, 6000, NULL, NULL, NULL, 0);
+  res = ccn_get(ccn, name_v, templ, 6000, NULL, NULL, NULL, 0);
   ccn_charbuf_destroy(&name_v);
   if (res < 0)
   {
